@@ -4,13 +4,13 @@ import Textform from './components/Textform';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as 
-  Router, 
-  Routes, 
-  Route ,
-  Link,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as 
+//   Router, 
+//   Routes, 
+//   Route ,
+//   Link,
+// } from "react-router-dom";
 
 //  in function base ocmponents there is no need to import react
 function App() {
@@ -50,17 +50,17 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title="Text-Changer" aboutText="About us " mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
-        <Routes>
+        {/* <Routes>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/" element={<Textform showAlert={showAlert} heading="Enter The text to analyze" mode={mode} />} />
-        </Routes>
-        {/* <Textform showAlert={showAlert} heading="Enter The text to analyze" mode={mode} /> */}
+        </Routes> */}
+        <Textform showAlert={showAlert} heading="Enter The text to analyze" mode={mode} />
       </div>
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
